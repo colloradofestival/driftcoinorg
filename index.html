@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>DriftCoin.org | Drift Coin website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Binance smart chain token to support Drift car racing!" />
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+
+  <script src="./js/parts.js"></script>
+  <script src="./js/draw_rig.js"></script>
+  <script src="./js/app.js"></script>
+
+  <script src="./js/web3_helper/web3_checks.js"></script>
+
+  <script src="./js/contracts/Addresses.js"></script>
+  <script src="./js/contracts/Core.js"></script>
+  <script src="./js/contracts/Sale.js"></script>
+  <script src="./js/eth_magic.js"></script>
+  <script src="./js/buttons.js"></script>
+
+
+
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body id="home">
+
+
+  <header>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+      <div class="container">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <img src="./images/logo.png" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li>
+              <a class="nav-link active" href="#presale">Tokenomics</a>
+            </li>
+            <li>
+              <a class="nav-link active" href="#roadmap">Roadmap</a>
+            </li>
+            <li>
+              <a class="nav-link active" href="#faq">FAQ</a>
+            </li>
+            <li>
+              <a class="nav-link active" style="opacity: 0.3;">Marketplace (Soon)</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+  <main role="main">
+    <section class="first">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-8 col-lg-6 col-xl-6">
+            <p class="lead lead-top">Welcome to DriftCoin!
+              Our mission to promote Drift as a sport and support the next-generation of the racing drivers with a give
+              a chance to compete.
+              <br>
+              <br>
+            <p class="lead beyond">Drift, passion, community!</p>
+            </p>
+
+
+            <div class="row" id="refbox" style="display: none;">
+              <p class="lead">Invite friends and get up to 10% of their spendings!</p>
+              <div class="col-12">
+                <div class="input-group mb-3 referral">
+                  <input type="text" value="https://" class="form-control" readonly id="referral_url"
+                    placeholder="Your Referral URL" aria-label="Your Referral URL" aria-describedby="basic-addon2">
+                  <div class="input-group-append">
+                    <button class="btn btn-warning text-white" onclick="copy_to_clipboard()"
+                      type="button">Copy!</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row" id="metamaskbox" style="display: none;">
+              <p class="lead">You need to install MetaMask to buy/sell DriftCoin. If you have not installed
+                MetaMask yet, please click the image below:</p>
+              <div class="col-12 text-center">
+                <a href="https://metamask.io/" target="_blank"><img src="./images/metamask-255x77.png"
+                    class="img-responsive"></a>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="col-12 col-md-8 col-lg-6 col-xl-6 text-center">
+            <div id="rig_container"><img id="random_rig" src="./images/index.jpg" class="img-responsive"></div>
+            <div class="rig_draw_buttons2">
+
+            </div>
+          </div>
+        </div>
+        <div id="presale" class="flex-row">
+          <div class="d-flex text-white justify-content-center">
+            <div class="countdown_box bg-primary">
+              <a>$ Buy Now $</a><br>
+              <span>On PancakeSwap</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+
+
+
+
+    </section>
+
+
+
+
+
+    <section class="forth">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-12 col-md-4 col-lg-6 col-xl-6">
+            <img class="img-responsive" src="./images/thebegin.png">
+          </div>
+          <div class="col-12 col-md-8 col-lg-6 col-xl-6">
+            <h1 class="">Tokenomics</h1>
+            <a class="features">
+              <br>
+              <p>Token supply: <b>2.997.000.000</b> (2JZ engine has 2.997 ccm)</p>
+              <p>Launch sale: <b>85%</b> (Stealth launch) </p>
+              <p>Marketing: <b>5%</b> <br> Street-pro racing car, drift-coin logo placing on racing cars, influencer
+              </p>
+              <p>Charity: <b>10%</b> <br> Simulator championship donation, car part replace charity fund</p>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section id="roadmap" class="roadmap" style='background-color: ghostwhite;'>
+
+      <div class="container">
+        <h3 style="margin-bottom: 2em; ">Roadmap</h3>
+        <div class="row">
+          <div class="timeline-centered">
+
+            <article class="timeline-entry left-aligned">
+
+              <div class="timeline-entry-inner">
+                <time class="timeline-time"><span>Now</span> <span>Stage 0</span></time>
+
+                <div class="timeline-icon bg-secondary">
+                  <i class="entypo-suitcase"></i>
+                </div>
+
+                <div class="timeline-label">
+                  <h2><a>Stealth launch</a></h2>
+                  <p>
+                    - Contract creation<br>
+                    - Youtube, Instagram, Tik-tok marketing<br>
+                    - Reveal first Racing car<br>
+                  </p>
+                </div>
+              </div>
+
+            </article>
+
+            <article class="timeline-entry">
+
+              <div class="timeline-entry-inner">
+                <time class="timeline-time"><span>2021 Q4</span> <span>Stage 1</span></time>
+
+                <div class="timeline-icon bg-success">
+                  <i class="entypo-feather"></i>
+                </div>
+
+                <div class="timeline-label">
+                  <h2><a>Stage 1</a> <span></span></h2>
+                  <p>- First simulation championship<br>
+                    - DriftCoin logo placement on Drift cars<br>
+                    - Contacting with new talents<br>
+                  </p>
+                </div>
+              </div>
+
+            </article>
+
+
+            <article class="timeline-entry left-aligned">
+
+              <div class="timeline-entry-inner">
+                <time class="timeline-time"><span>2022 Q1</span> <span>Stage 2</span></time>
+
+                <div class="timeline-icon bg-warning">
+                  <i class="entypo-suitcase"></i>
+                </div>
+
+                <div class="timeline-label">
+                  <h2><a>Marketplace</a></h2>
+                  <p>
+                    - ECU Marketplace<br>
+                    - Semi-pro racing part kits<br>
+                    - Durability tests<br>
+                    - Special offers<br>
+                  </p>
+                </div>
+              </div>
+
+            </article>
+
+
+            <article class="timeline-entry">
+
+              <div class="timeline-entry-inner">
+                <time class="timeline-time"><span>2022 Q2-Q3</span> <span>Stage 3</span></time>
+
+                <div class="timeline-icon bg-info">
+                  <i class="entypo-location"></i>
+                </div>
+
+                <div class="timeline-label">
+                  <h2><a>Token listing</a> <span></span> </h2>
+
+                  <p>
+                    - Getting exchange listing<br>
+                    - Wallet and Payment gate<br>
+                    - 3rd party Webshop integration<br>
+                  </p>
+
+                </div>
+              </div>
+
+            </article>
+
+
+
+
+            <article class="timeline-entry begin">
+
+              <div class="timeline-entry-inner">
+
+                <div class="timeline-icon" style="-webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg);">
+                  <i class="entypo-flight"></i>
+                </div>
+
+              </div>
+
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="faq" class="faq">
+      <div class="container">
+
+        <div class="row">
+          <h2>F.A.Q.</h2>
+          <div class="col-12">
+            <h3>About DriftCoin</h3>
+            <p>
+              <a class="text-secondary" data-toggle="collapse" href="#Faq1" role="button" aria-expanded="false"
+                aria-controls="Faq1">
+                What is DriftCoin?
+              </a>
+            </p>
+            <div class="collapse" id="Faq1">
+              <div class="card card-body">
+                DriftCoin is a BSC EIP-20 Token based which is available for multi-chain transaction and tradeable on
+                DeFi ecosystem.
+
+              </div>
+            </div>
+
+            <h3>What are the use cases</h3>
+            <p>
+              <a class="text-secondary" data-toggle="collapse" href="#Faq2" role="button" aria-expanded="false"
+                aria-controls="Faq2">
+                Marketplace
+              </a>
+            </p>
+            <div class="collapse" id="Faq2">
+              <div class="card card-body">
+                Building a drift car or any racing car is a continuous learning, with our experience we will collect the
+                best price&value parts in our marketplace.
+              </div>
+            </div>
+
+
+
+
+
+          </div>
+        </div>
+
+
+      </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </main>
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="page-footer font-small mdb-color pt-4">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+
+
+      <hr>
+
+      <!-- Grid row -->
+      <div class="row d-flex align-items-center">
+
+        <!-- Grid column -->
+        <div class="col-md-8 col-lg-8">
+
+          <!--Copyright-->
+          <p class="text-center text-md-left">© 2021 Copyright - <a href="https://driftcoin.org"><strong>
+                driftcoin.org</strong></a></p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-4 ml-lg-0">
+
+          <!-- Social buttons -->
+          <div class="text-center text-md-right">
+            <ul class="list-unstyled list-inline">
+              <li class="list-inline-item"><a href="https://www.facebook.com/" target="_blank"
+                  class="btn-floating btn-lg rgba-white-slight mx-1"><i class="fab fa-facebook-f"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.instagram.com/" target="_blank"
+                  class="btn-floating btn-lg rgba-white-slight mx-1"><i class="fab fa-instagram"></i></a></li>
+              <li class="list-inline-item"><a href="https://discordapp.com/" target="_blank"
+                  class="btn-floating btn-lg rgba-white-slight mx-1"><i class="fab fa-discord"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.reddit.com/r/" target="_blank"
+                  class="btn-floating btn-lg rgba-white-slight mx-1"><i class="fab fa-reddit"></i></a></li>
+            </ul>
+          </div>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+  </footer>
+  <!-- Footer -->
+
+
+
+</body>
+
+</html>
