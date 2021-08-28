@@ -103,10 +103,11 @@ $(document).ready(function(){
 
 function update_maintimer()
 {
-    target_time = 1527980340; // EOS Mainnet Launch
-    current_time = 1527235011+window.windowage;
+  target_time = 1633111200000; // Big Pump
 
-    let result = countdown(target_time-current_time);
+  current_time = Date.now();
+
+  let result = countdown(target_time-current_time);
 
     $('#countday').html(result.days);
     $('#counthour').html(result.hours);
@@ -123,7 +124,7 @@ function countdown (distance)
 
   if(distance>0)
   {
-        distance = distance*1000; // Unixtime
+        distance = distance; // Unixtime
 
         let result = {};
         // Time calculations for days, hours, minutes and seconds
@@ -137,61 +138,9 @@ function countdown (distance)
 
 }
 
-function update_referral()
-{
-      if(contract_active == true)
-      {
-        $('#referral_url').val(url_generator(account)); 
-        $('#refbox').show();
-        $('#metamaskbox').hide();  
-      }  
-      else
-      {
-        $('#metamaskbox').show();
-      }
-      
-}
 
 
-function update_presale()
-{
 
-
-    if(packages.length>0 && contract_active == true)
-    {
-        for (let index = 0; index < packages.length; index++) 
-        {
-          $('[data-package-limit="' + index + '"]').html(packages[index].limit);
-          $('[data-package-sold="' + index + '"]').html(packages[index].sold);
-          let left = packages[index].limit-packages[index].sold; // TODO
-          $('[data-package-owned="' + index + '"]').html(owned_packages([index]));
-          $('[data-package-left="' + index + '"]').html(left);
-
-            if(account_balance > packages[index].price)
-            {
-              $('[data-package-buy="' + index + '"]').addClass('btn-primary');
-              $('[data-package-buy="' + index + '"]').removeClass('btn-outline-primary');
-            }
- 
-        }
-    }
-}
-
-
-function owned_packages(package_id)
-{
-      let owned = 0;
-
-          for (let index = 0; index < inventory.length; index++) 
-          {
-            if(package_id==inventory[index].type)
-            {
-              owned++;
-            }
-          }
-
-    return owned;      
-}
 
 
 
@@ -201,8 +150,7 @@ $( document ).ready(function() {
       function update(){
         window.windowage += 1;
         update_maintimer();
-        update_presale();
-        update_referral();
+ 
       };
 
       setInterval(update, 1000); // Main Loop every 100ms
