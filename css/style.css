@@ -3,21 +3,35 @@ main{
   margin-top:59px;
 }
 
+
+.solanaGreen {
+ background-color: rgb(20, 241, 149);
+
+}
+
+.solanaBlue {
+  background-color: rgb(128, 236, 255)
+}
+
 .logo {
     height: 50px;
 }
 
 .first
 {
-  background-color: #f1f1f1;
+  background-color: #242424;
   padding-top: 45px;
 }
 
 .lead-top{
-  margin-top: 2rem;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
 }
 
 .beyond{
+  color: #fff;
    margin-top: 50px;
    margin-bottom: 50px;
    font-size: 2.5rem;
@@ -38,7 +52,7 @@ main{
 .third{
   padding-bottom: 50px;
   padding-top: 50px;
-  background-color: #f1f1f1;
+  background-color: #191919;
 }
 
 .faq{
@@ -84,7 +98,7 @@ main{
 
 .features
 {
-  color: #82817d;
+  color: #191919;
   line-height: 38px;
   font-size: 20px;
 }
@@ -100,12 +114,13 @@ main{
 }
 
 .countdown_box{
+  color: #000;
   position: relative;
   display: block;
   top:40px;
   width: 400px;
   height: 80px;
-  border-radius: 2rem;
+  border-radius: 1rem;
   text-align: center;
   font-size: 42px;
   line-height: 0px;
@@ -121,7 +136,7 @@ main{
 .stats{
   margin: 0px;
   font-size: 28px;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Archivo', sans-serif;
 }
 
 
@@ -178,25 +193,32 @@ footer p.text-center{
 
 
 .forth{
-   background: #fff; 
+   background: #191919; 
    padding-top: 50px;
    padding-bottom: 50px;
 }
 
 .fifth{
-  background: #f1f1f1; 
+  background: #191919; 
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+.sixth{
+  background: #242424; 
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
 .roadmap{
-  background: #fff; 
+  background: #242424; 
   padding-top: 80px;
   padding-bottom: 50px;
 }
 
 .faq{
-  background: #f1f1f1; 
+  background: #191919; 
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -219,18 +241,17 @@ footer p.text-center{
 
 .email{
   display: block;
-  border-radius: 2rem;
+  border-radius: 1rem;
   text-align: center;
-  padding: 1rem;
-  padding-left: 0.5rem;
+  padding: 0.2rem;
   margin: 0.2rem;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .email a {
-  color: white;
+  color: black;
     text-decoration: none;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Archivo', sans-serif;
 }
 
 
