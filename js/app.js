@@ -104,7 +104,7 @@ $(document).ready(function () {
 });
 
 function update_maintimer() {
-  target_time = 1637449200000; // Big Pump
+  target_time = 1638943576000; 
 
   current_time = Date.now();
 
